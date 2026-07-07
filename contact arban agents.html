@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arban Agents — Contact</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --black: #0a0a0a;
+  --gold: #c9a24d;
+  --soft-gold: #e6d28a;
+  --text-muted: #b5b5b5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Header */
+header {
+    background: rgba(15,20,25,0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+}
+
+/* Navbar container */
+nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+/* Logo text gold */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #D4AF37; /* Gold color */
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+}
+
+/* Nav links inline */
+.nav-links {
+    display: flex; /* ensures inline layout */
+    gap: 2rem;     /* spacing between links */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Link colors */
+.nav-links a {
+    text-decoration: none;
+    color: #D4AF37; /* gold to match logo */
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFD700; /* slightly brighter gold on hover */
+    transform: translateY(-1px);
+}
+
+/* CTA Button */
+.cta-btn {
+    background: #D4AF37; /* gold color */
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    color: #000; /* black text */
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 25px 60px rgba(212,175,55,0.35);
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 40px 80px rgba(212,175,55,0.4);
+}
+
+h1, h2 {
+  color: var(--gold);
+}
+
+
+
+
+        /* Hero */
+        .hero { height: 100vh; background: linear-gradient(135deg, var(--deep-navy) 0%, var(--charcoal) 100%); display: flex; align-items: center; text-align: center; color: var(--ivory-cream); position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 20% 80%, rgba(212,175,55,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(229,228,226,0.1) 0%, transparent 50%); animation: pulseGlow 10s infinite ease-in-out; }
+        @keyframes pulseGlow { 0%, 100% { opacity: 0.4; transform: scale(1) rotate(0deg); } 50% { opacity: 0.8; transform: scale(1.15) rotate(180deg); } }
+        .hero-particles { position: absolute; width: 100%; height: 100%; overflow: hidden; }
+        .particle { position: absolute; background: var(--gold-lux); border-radius: 50%; animation: orbitLux 20s infinite linear; box-shadow: 0 0 20px rgba(212,175,55,0.5); }
+        .particle:nth-child(1) { width: 6px; height: 6px; top: 20%; left: 10%; animation-direction: normal; animation-delay: 0s; }
+        .particle:nth-child(2) { width: 8px; height: 8px; top: 40%; right: 15%; animation-direction: reverse; animation-delay: 5s; }
+        .particle:nth-child(3) { width: 4px; height: 4px; bottom: 30%; left: 70%; animation-delay: 10s; }
+        .particle:nth-child(4) { width: 7px; height: 7px; top: 60%; left: 80%; animation-delay: 15s; }
+        @keyframes orbitLux { 0% { transform: translate(0, 0) rotate(0deg); opacity: 0; } 10% { opacity: 1; } 50% { transform: translate(100px, -50px) rotate(180deg); } 90% { opacity: 1; } 100% { transform: translate(0, 0) rotate(360deg); opacity: 0; } }
+        .hero-content { max-width: 800px; margin: 0 auto; z-index: 2; position: relative; }
+        .hero h1 { font-size: 4rem; font-weight: 700; margin-bottom: 1.5rem; animation: fadeInUpGold 1.2s ease; text-shadow: 0 4px 20px rgba(212,175,55,0.3); }
+        .hero p { font-size: 1.3rem; margin-bottom: 3rem; opacity: 0.95; animation: fadeInUpGold 1.2s ease 0.3s both; }
+        @keyframes fadeInUpGold { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Sections */
+    
+        .about { background: var(--ivory-cream); }
+        .about h2, .services h2 { font-size: 3rem; text-align: center; margin-bottom: 4rem; color: var(--deep-navy); }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-text p { font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--charcoal); }
+        .services { background: var(--deep-navy); color: var(--ivory-cream); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card { background: rgba(47,55,72,0.6); backdrop-filter: blur(15px); padding: 3rem; border-radius: 25px; text-align: center; transition: all 0.4s cubic-bezier(0.25,0.46,0.45,0.94); border: 1px solid rgba(212,175,55,0.2); }
+        .service-card:hover { transform: translateY(-15px) rotateX(5deg); box-shadow: var(--shadow-lux); border-color: var(--gold-lux); }
+        .service-icon { font-size: 3.5rem; margin-bottom: 1.5rem; background: var(--gradient-lux); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.nav-links a {
+  color: var(--soft-gold);
+}
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+body {
+  background: #000000 !important;
+  padding-top: 90px;
+}
+  background: radial-gradient(circle at top, #111 0%, var(--black) 60%);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.7;
+}
+
+/* Container */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 24px 60px;
+}
+
+
+/* Headings */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 48px;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  max-width: 700px;
+  font-size: 17px;
+}
+
+/* Divider */
+.divider {
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 48px 0;
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 28px;
+  color: var(--soft-gold);
+  margin-bottom: 20px;
+}
+
+/* Contact Info */
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.contact-info a:hover {
+  opacity: 0.75;
+}
+
+.contact-info strong {
+  color: var(--gold);
+}
+/* Form */
+form {
+  margin-top: 40px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+input, textarea {
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,162,77,0.35);
+  color: #fff;
+  padding: 14px 16px;
+  font-size: 15px;
+  border-radius: 2px;
+  outline: none;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--gold);
+  background: rgba(255,255,255,0.06);
+}
+
+textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Button */
+button {
+  background: linear-gradient(135deg, var(--gold), var(--soft-gold));
+  color: #000;
+  border: none;
+  padding: 16px 36px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(201,162,77,0.35);
+}
+
+/* Footer */
+.footer {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* Luxury Glow */
+.glow {
+  position: fixed;
+  top: -200px;
+  right: -200px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(201,162,77,0.15), transparent 70%);
+  pointer-events: none;
+</style>
+</head>
+
+<body>
+
+  <header>
+        </div>
+        <nav class="container">
+            <div class="logo">Arban Agents</div>
+            <ul class="nav-links">
+           <li><a href="file:///C:/Users/Administrator/Desktop/Arban%20agency.html">Home</a></li>
+                <li><a href="file:///C:/Users/Administrator/Documents/Zoom/about%20arban%20agents.html">About</a></li>
+                <li><a href="file:///C:/Users/Administrator/Documents/services%20arban%20agency.html">Services</a></li>
+                <li><a href="file:///C:/Users/Administrator/Documents/contact%20arban%20agents.html">Contact</a></li>
+            </ul>
+            <a href="file:///C:/Users/Administrator/Documents/contact%20arban%20agents.html" class="cta-btn">Get Started</a>
+        </nav>
+    </header>
+
+
+
+<div class="glow"></div>
+
+<div class="container">
+  <h1>Contact</h1>
+  <p class="subtitle">
+    Where conversation becomes collaboration. We engage selectively, thoughtfully,
+    and with a commitment to enduring impact.
+  </p>
+
+  <div class="divider"></div>
+
+  <h2 class="section-title">Connect With Us</h2>
+  <div class="contact-info">
+    <p><strong>Primary Email:</strong> <a href="mailto:arbanagencyinfluencermarketing@gmail.com">arbanagencyinfluencermarketing@gmail.com</a></p>
+  
+  </div>
+
+  <div class="divider"></div>
+
+
+  <div class="footer">
+    © Arban Agents — Where Strategy Meets Serenity
+  </div>
+</div>
+</body>
+</html>
